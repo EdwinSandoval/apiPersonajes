@@ -1,0 +1,57 @@
+<article class="centered-article">
+ 
+  <div style="padding: 20px;" class="color-fondo">
+    <!-- Formulario de búsqueda -->
+    <form (ngSubmit)="buscarPersonaje()">
+      <div class="formulario">
+        <label for="id">ID del Personaje:  </label>
+        <input
+          id="id"
+          [(ngModel)]="id"
+          name="id"
+          type="number"
+          required
+          placeholder="Ingrese el ID del personaje"
+        />
+        <button type="submit" [disabled]="loading">Buscar</button>
+      </div>
+      
+    </form>
+  
+    <!-- Mostrar mensaje de carga -->
+    <div *ngIf="loading">Cargando...</div>
+  
+    <!-- Mostrar mensaje de error -->
+    <div *ngIf="error" class="error-message">
+      {{ error }}
+    </div>
+  
+    <!-- Mostrar los detalles del personaje -->
+    <div *ngIf="personaje" class="contenedor">
+      <div class="div2">
+        <img [src]="personaje.image" alt="{{ personaje.name }}" style="width:180px;"/>
+      </div>
+
+      <div class="div1">
+        <div>
+          <h3  class="epacio_vertical_superior justificar_izquierda">{{ personaje.name }}</h3>  
+          <span class="justificar_izquierda" style="display: flex; justify-content: flex-start; align-items: center;">
+            <p class="justificar_izquierda" style="margin-right: 10px;"> {{ personaje.status }}</p>
+            <p class="justificar_izquierda" >{{ personaje.species }}</p>
+          </span>
+        </div>
+        <div>
+          <p class="epacio_vertical_superior justificar_izquierda">Last known location:</p>
+          <p class="epacio_vertical_inferior justificar_izquierda"> {{ personaje.location.name }}</p>
+        </div>
+        <div>
+          <p class="epacio_vertical_superior justificar_izquierda">First seen in:</p>
+          <p class="epacio_vertical_inferior justificar_izquierda"> {{ personaje.gender }}</p>
+        </div>
+  
+      </div>
+      
+    </div>
+  </div>
+ 
+</article>
