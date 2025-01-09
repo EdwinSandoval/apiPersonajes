@@ -34,13 +34,21 @@
     padding: 5px;
   }
 
-  .formulario button {
+  .formulario button, .color-boton {
     padding: 5px 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
   }
+
+  // .color-boton{
+  //   padding: 5px 10px;
+  //   background-color: #4CAF50;
+  //   color: white;
+  //   border: none;
+  //   cursor: pointer;
+  // }
 
   .contenedor {
     display: flex; /* Hace que los divs hijos estén alineados horizontalmente */

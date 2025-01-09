@@ -27,7 +27,7 @@
     </div>
   
     <!-- Mostrar los detalles del personaje -->
-    <div *ngIf="personaje" class="contenedor">
+    <div *ngIf="personaje" class="contenedor" id="personaje-content">
       <div class="div2">
         <img [src]="personaje.image" alt="{{ personaje.name }}" style="width:180px;"/>
       </div>
@@ -53,5 +53,5 @@
       
     </div>
   </div>
- 
+  <button class="color-boton" (click)="descargarPDF()">Descargar PDF</button>
 </article>
