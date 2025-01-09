@@ -43,18 +43,4 @@ public class PersonajeController {
         }
     }
 
-//    @PostMapping("/guardar")
-//    public ResponseEntity<?> save(@RequestBody PersonajeRequestDto request){
-//        return new ResponseEntity<>(this.clienteService.save(request), HttpStatus.CREATED);
-//    }
-
-//    @DeleteMapping("/eliminar/{id}")
-//    public String delete(@PathVariable("id") Integer id){
-//        return clienteService.eliminar(id);
-//    }
-//
-//    @PutMapping("/actualizar/{id}")
-//    public PersonajeResponseDto actualizar(@RequestBody PersonajeRequestDto body, @PathVariable("id") Integer idUsuario) {
-//        return clienteService.update(body, idUsuario);
-//    }
 }

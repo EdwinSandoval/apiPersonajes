@@ -11,6 +11,7 @@ import { PersonajeService } from '../servicios/personaje.service';
 export class ListaPersonajesComponent implements OnInit{
 
   personajes:ListaPersonajes[]|null=null;
+  personaje: PersonajeResponseDto[]=[]
   constructor(private personajeServicio:PersonajeService,private router:Router) { }
 
   ngOnInit(): void {
@@ -22,9 +23,12 @@ export class ListaPersonajesComponent implements OnInit{
   obtenerPersonajes(){
     this.personajeServicio.obtenerListaPersonajes()
     .subscribe(data=> {
-      this.personajes=data;
-      console.log(data);
+      this.personajes=data
+       console.log(data);
       
     })
   }
+
+ 
+  
 }
