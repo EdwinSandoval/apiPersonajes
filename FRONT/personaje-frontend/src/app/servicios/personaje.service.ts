@@ -15,14 +15,19 @@ export class PersonajeService {
  
  
    //metodo obtiene todos los empleados
-   obtenerListaPersonajes():Observable<ListaPersonajes[]>{
-     return this.httpClient.get<ListaPersonajes[]>(`${this.baseUrl}`);
+   obtenerListaPersonajes():Observable<ListaPersonajes>{
+     return this.httpClient.get<ListaPersonajes>(`${this.baseUrl}`);
  
    }
  
    obtenerPersonajeId(id:number):Observable<PersonajeResponseDto>{
      return this.httpClient.get<PersonajeResponseDto>(`${this.baseUrl}/${id}`)
    }
+
+   // Método para obtener los personajes con paginación
+  getCharacters(url: string = this.baseUrl): Observable<ListaPersonajes> {
+    return this.httpClient.get<ListaPersonajes>(url);
+  }
  
   
 }
