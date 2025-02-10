@@ -1,23 +1,4 @@
-<!-- <h2>Lista Personajes</h2>
-<table class="table table-striped">
-    <thead class="table table-dark">
-        <tr>
-            <th>Nombre</th>
-            <th>Especie</th>
-            <th>Estado</th>
-        </tr>
-        
-    </thead>
-    <tbody >
-        <tr *ngFor="let personaje of personajes">
-           
-            <td>{{personaje.results[0].name}}</td> 
-            
-        </tr>
-    </tbody>
-</table> -->
 
-<!-- src/app/components/character-list/character-list.component.html -->
 <div *ngIf="loading">Cargando...</div>
 
 <div class="character-grid">
@@ -30,8 +11,5 @@
 </div>
 </div>
 
-<!-- Botón para cargar más personajes -->
-<!-- <div *ngIf="nextUrl && !loading">
-  <button (click)="loadMore()">Cargar más</button>
-</div> -->
+
 

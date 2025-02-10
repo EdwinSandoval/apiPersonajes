@@ -24,10 +24,6 @@ export class PersonajeService {
      return this.httpClient.get<PersonajeResponseDto>(`${this.baseUrl}/${id}`)
    }
 
-   // Método para obtener los personajes con paginación
-  getCharacters(url: string = this.baseUrl): Observable<ListaPersonajes> {
-    return this.httpClient.get<ListaPersonajes>(url);
-  }
  
   
 }

@@ -31,7 +31,7 @@ export class InfoDto {
     next: string | null;
     prev: string | null;
     };
-    results: Character[];
+    results: PersonajeResponseDto[];
   }
 
   export class Character {

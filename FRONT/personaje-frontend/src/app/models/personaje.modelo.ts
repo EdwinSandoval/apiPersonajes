@@ -25,10 +25,6 @@ export interface InfoDto {
     created: string;
   }
 
-  // export interface ListaPersonajes {
-  //   info: InfoDto;
-  //   results: PersonajeResponseDto[];
-  // }
 
   export class ListaPersonajes {
       info:{
@@ -37,19 +33,7 @@ export interface InfoDto {
         next: string | null;
         prev: string | null;
       };
-      results: Character[];
+      results: PersonajeResponseDto[];
   }
 
-  interface Character {
-    id: number;
-    name: string;
-    status: string;
-    species: string;
-    gender: string;
-    origin: { name: string; url: string };
-    location: { name: string; url: string };
-    image: string;
-    episode: string[];
-    url: string;
-    created: string;
-  }
+ 
